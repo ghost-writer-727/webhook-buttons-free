@@ -4,7 +4,7 @@ Tags: woocommerce, webhook, orders, automation, buttons
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,10 @@ Build the release zips with `scripts/build.sh` in the product folder (freemius, 
 3. The order data as received by a webhook.
 
 == Changelog ==
+
+= 1.0.4 =
+* One review request after your store has sent 5 orders. Dismiss it for good or snooze it for 30 days.
+* New action for developers: `webhook_buttons_sent` fires after every successful send.
 
 = 1.0.3 =
 * Cleaner Upgrade page: one Pro card with a site-count picker, yearly prices.

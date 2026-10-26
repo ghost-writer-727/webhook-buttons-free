@@ -6,7 +6,7 @@ Plugin URI: https://noblestrategies.dev/webhook-buttons
 Description: Adds buttons to the WooCommerce order screen. Each button sends the order data to a webhook URL you choose.
 Author: Noble Strategies
 Author URI: https://noblestrategies.dev
-Version: 1.0.3
+Version: 1.0.4
 Requires at least: 6.5
 Requires PHP: 7.4
 Requires Plugins: woocommerce
@@ -26,7 +26,7 @@ if ( function_exists( 'webhook_buttons_fs' ) && webhook_buttons_fs() ) {
     return;
 }
 
-define( 'WEBHOOK_BUTTONS_VERSION', '1.0.3' );
+define( 'WEBHOOK_BUTTONS_VERSION', '1.0.4' );
 define( 'WEBHOOK_BUTTONS_PLUGIN_FILE', __FILE__ );
 define( 'WEBHOOK_BUTTONS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WEBHOOK_BUTTONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
