@@ -1,0 +1,708 @@
+/*
+ * In-dashboard Freemius pricing page (Webhook Buttons > Upgrade).
+ * Loaded through the SDK 'pricing/css_path' filter. The markup is the SDK's React app; only the look is ours.
+ * Every rule is prefixed with two ids (#fs_pricing #fs_pricing_app) so it outranks the SDK's inline styles
+ * without !important. Palette: navy from the plugin icon, WordPress admin blue for the one action.
+ */
+#fs_pricing {
+	--wb-navy: #1f2a44;
+	--wb-navy-deep: #16203a;
+	--wb-navy-tint: #e9ecf3;
+	--wb-blue: #2271b1;
+	--wb-blue-dark: #135e96;
+	--wb-ink: #1d2327;
+	--wb-ink-soft: #50575e;
+	--wb-ink-faint: #787c82;
+	--wb-line: #dcdcde;
+	--wb-line-soft: #ebebec;
+	--wb-surface: #ffffff;
+	--wb-surface-alt: #f6f7f7;
+	--wb-good: #1d6b3a;
+	--wb-good-tint: #e6f3ea;
+	--wb-radius: 8px;
+	--wb-shadow: 0 1px 2px rgba(29, 35, 39, 0.06), 0 8px 24px -12px rgba(31, 42, 68, 0.25);
+}
+
+#fs_pricing #fs_pricing_app {
+	color: var(--wb-ink);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 8px 0 48px;
+}
+
+/* ---------- Header: one title row, the pitch under it ---------- */
+#fs_pricing #fs_pricing_app .fs-app-header {
+	background: none;
+	border: 0;
+	box-shadow: none;
+	padding: 16px 0 28px;
+	margin: 0;
+}
+#fs_pricing #fs_pricing_app .fs-app-header .fs-page-title {
+	display: none;
+}
+#fs_pricing #fs_pricing_app .fs-app-header .fs-plugin-title-and-logo {
+	background: none;
+	border: 0;
+	box-shadow: none;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-app-header .fs-plugin-logo {
+	width: 52px;
+	height: 52px;
+	border-radius: 10px;
+	margin: 0;
+	flex: 0 0 auto;
+}
+#fs_pricing #fs_pricing_app .fs-app-header .fs-plugin-title-and-logo h1 {
+	font-size: 23px;
+	line-height: 1.2;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	color: var(--wb-ink);
+	margin: 0;
+	padding: 0;
+}
+#fs_pricing #fs_pricing_app .fs-app-header .fs-plugin-title-and-logo h1 strong {
+	font-weight: 600;
+}
+
+/* ---------- Plans ---------- */
+#fs_pricing #fs_pricing_app .fs-app-main .fs-section--plans-and-pricing {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+#fs_pricing #fs_pricing_app .fs-section--packages {
+	margin: 0;
+	padding: 0;
+}
+#fs_pricing #fs_pricing_app .fs-section--packages .fs-prev-package,
+#fs_pricing #fs_pricing_app .fs-section--packages .fs-next-package {
+	display: none;
+}
+#fs_pricing #fs_pricing_app .fs-packages-nav {
+	margin: 0;
+	padding: 0;
+}
+#fs_pricing #fs_pricing_app .fs-packages-tab {
+	display: none;
+}
+/* The SDK's carousel script writes inline widths on the list and the cards; !important is the only way past an inline style. */
+#fs_pricing #fs_pricing_app .fs-packages {
+	display: grid;
+	grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+	gap: 20px;
+	align-items: start;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	width: auto !important;
+	max-width: none;
+	transform: none !important;
+}
+#fs_pricing #fs_pricing_app .fs-packages .fs-package,
+#fs_pricing #fs_pricing_app .fs-packages .fs-package:first-child,
+#fs_pricing #fs_pricing_app .fs-packages .fs-package:last-child,
+#fs_pricing #fs_pricing_app .fs-packages .fs-package + .fs-package {
+	position: relative;
+	width: auto !important;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	background: var(--wb-surface);
+	border: 1px solid var(--wb-line);
+	border-radius: var(--wb-radius);
+	box-shadow: var(--wb-shadow);
+	overflow: hidden;
+	display: block;
+	float: none;
+	text-align: left;
+	transform: none;
+}
+#fs_pricing #fs_pricing_app .fs-packages .fs-package.fs-featured-plan {
+	border-color: var(--wb-navy);
+}
+
+/* Lite has no site counts; the SDK still renders the empty picker table. */
+#fs_pricing #fs_pricing_app .fs-package.fs-free-plan .fs-license-quantities {
+	display: none;
+}
+
+/* "Most Popular" means nothing with one paid plan. */
+#fs_pricing #fs_pricing_app .fs-package .fs-most-popular {
+	display: none;
+}
+
+#fs_pricing #fs_pricing_app .fs-package .fs-package-content {
+	padding: 0 0 24px;
+}
+
+/* Plan name row: a band. Navy for Pro, soft gray for Lite. */
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-title,
+#fs_pricing #fs_pricing_app .fs-package:not(.fs-featured-plan):first-child .fs-plan-title,
+#fs_pricing #fs_pricing_app .fs-package:not(.fs-featured-plan):last-child .fs-plan-title {
+	margin: 0;
+	padding: 14px 24px;
+	background: var(--wb-surface-alt);
+	border: 0;
+	border-bottom: 1px solid var(--wb-line-soft);
+	border-radius: 0;
+	color: var(--wb-ink);
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-plan-title {
+	background: var(--wb-navy);
+	border-bottom-color: var(--wb-navy-deep);
+	color: #fff;
+}
+
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-description {
+	margin: 0;
+	padding: 20px 24px 0;
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 400;
+	color: var(--wb-ink-soft);
+	text-align: left;
+	text-transform: none;
+	letter-spacing: normal;
+	min-height: 0;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-description strong {
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: normal;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-placeholder {
+	display: none;
+}
+
+/* Price */
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount,
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount-free {
+	display: flex;
+	align-items: baseline;
+	gap: 2px;
+	margin: 0;
+	padding: 18px 24px 0;
+	line-height: 1;
+	text-align: left;
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount-free {
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount .fs-currency-symbol {
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--wb-ink-soft);
+	align-self: flex-start;
+	margin-top: 6px;
+	margin-right: 2px;
+	position: static;
+	vertical-align: baseline;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount .fs-selected-pricing-amount-integer {
+	font-size: 46px;
+	font-weight: 600;
+	letter-spacing: -0.03em;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount .fs-selected-pricing-amount-fraction-container {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 6px;
+	position: static;
+	vertical-align: baseline;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount .fs-selected-pricing-amount-fraction {
+	display: none;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount .fs-selected-pricing-amount-cycle {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--wb-ink-faint);
+	position: static;
+	vertical-align: baseline;
+	line-height: 1;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-cycle {
+	margin: 10px 0 0;
+	padding: 0 24px;
+	text-align: left;
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	color: var(--wb-ink-faint);
+	text-transform: none;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-cycle strong {
+	font-weight: 500;
+	text-transform: none;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-license-quantity,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-selected-pricing-license-quantity {
+	margin: 2px 0 0;
+	padding: 0 24px;
+	text-align: left;
+	font-size: 13px;
+	color: var(--wb-ink-soft);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-license-quantity .fs-tooltip {
+	margin-left: 4px;
+}
+
+/* Features */
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features {
+	margin: 20px 24px 0;
+	padding: 16px 0 0;
+	border-top: 1px solid var(--wb-line-soft);
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-support {
+	margin: 0 0 10px;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--wb-ink);
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features-with-value {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li,
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li:not(:first-child) {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 0;
+	padding: 7px 0;
+	border-top: 1px solid var(--wb-line-soft);
+	font-size: 13px;
+	line-height: 1.4;
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li:first-child {
+	border-top: 0;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li > .fs-feature-title {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	gap: 8px;
+	flex: 1 1 auto;
+	min-width: 0;
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li > .fs-feature-title > span:first-child {
+	flex: 0 0 auto;
+	min-width: 96px;
+	text-align: right;
+	color: var(--wb-ink-soft);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li > .fs-feature-title > span:first-child strong {
+	font-weight: 600;
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-support-and-main-features .fs-plan-features-with-value li > .fs-feature-title > span:first-child strong {
+	color: var(--wb-good);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li > .fs-feature-title > .fs-feature-title {
+	flex: 1 1 auto;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features-with-value li .fs-tooltip {
+	flex: 0 0 auto;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features-with-value li .fs-tooltip .fs-icon svg {
+	opacity: 0.45;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features-with-value li:hover .fs-tooltip .fs-icon svg {
+	opacity: 0.9;
+}
+
+/* Site-count picker */
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities {
+	width: calc(100% - 48px);
+	margin: 20px 24px 0;
+	border: 1px solid var(--wb-line);
+	border-radius: 6px;
+	border-collapse: separate;
+	border-spacing: 0;
+	overflow: hidden;
+	background: var(--wb-surface);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container,
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container:last-child,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-license-quantities .fs-license-quantity-selected,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-license-quantities .fs-license-quantity-selected:last-child,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-license-quantities .fs-license-quantity-selected + .fs-license-quantity-container {
+	background: var(--wb-surface);
+	color: var(--wb-ink);
+	border: 0;
+	cursor: pointer;
+	transition: background-color 120ms ease-out;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container + .fs-license-quantity-container > td {
+	border-top: 1px solid var(--wb-line-soft);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container:hover {
+	background: var(--wb-surface-alt);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container.fs-license-quantity-selected,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-license-quantities .fs-license-quantity-container.fs-license-quantity-selected,
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container.fs-license-quantity-selected:hover {
+	background: var(--wb-navy-tint);
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities td {
+	padding: 10px 12px;
+	font-size: 13px;
+	line-height: 1.3;
+	vertical-align: middle;
+	text-align: left;
+	border: 0;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity {
+	width: 1%;
+	white-space: nowrap;
+	padding-right: 4px;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity input {
+	margin: 0 8px 0 0;
+	vertical-align: -2px;
+	accent-color: var(--wb-navy);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-container > td:not(.fs-license-quantity-discount):not(.fs-license-quantity-price) {
+	font-weight: 500;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-discount {
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-discount span,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-license-quantity-discount span,
+#fs_pricing #fs_pricing_app .fs-package.fs-featured-plan .fs-license-quantities .fs-license-quantity-selected .fs-license-quantity-discount span {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 999px;
+	background: var(--wb-good-tint);
+	color: var(--wb-good);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	line-height: 1.5;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-discount span.fs-license-quantity-no-discount {
+	display: none;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities .fs-license-quantity-price {
+	text-align: right;
+	font-weight: 600;
+	white-space: nowrap;
+	color: var(--wb-ink);
+}
+
+/* Action */
+#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container {
+	margin: 20px 24px 0;
+	padding: 0;
+	border: 0;
+	background: none;
+}
+#fs_pricing #fs_pricing_app .fs-button,
+#fs_pricing #fs_pricing_app .fs-button.fs-button--outline,
+#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container .fs-upgrade-button {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 11px 16px;
+	border-radius: 6px;
+	border: 1px solid var(--wb-blue);
+	background: var(--wb-blue);
+	color: #fff;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 1.3;
+	text-transform: none;
+	text-align: center;
+	box-shadow: none;
+	cursor: pointer;
+	transition: background-color 120ms ease-out, border-color 120ms ease-out;
+}
+#fs_pricing #fs_pricing_app .fs-button:hover:not(:disabled),
+#fs_pricing #fs_pricing_app .fs-button.fs-button--outline:hover:not(:disabled),
+#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container .fs-upgrade-button:hover:not(:disabled) {
+	background: var(--wb-blue-dark);
+	border-color: var(--wb-blue-dark);
+	color: #fff;
+}
+#fs_pricing #fs_pricing_app .fs-button:focus:not(:disabled),
+#fs_pricing #fs_pricing_app .fs-button.fs-button--outline:focus:not(:disabled),
+#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container .fs-upgrade-button:focus:not(:disabled) {
+	background: var(--wb-blue-dark);
+	border-color: var(--wb-blue-dark);
+	color: #fff;
+	outline: 2px solid var(--wb-blue);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+#fs_pricing #fs_pricing_app .fs-button:active:not(:disabled),
+#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container .fs-upgrade-button:active:not(:disabled) {
+	background: var(--wb-navy);
+	border-color: var(--wb-navy);
+	transform: none;
+}
+/* Lite's own button is a quiet secondary action (Downgrade, or Your Plan). */
+#fs_pricing #fs_pricing_app .fs-package.fs-free-plan .fs-upgrade-button-container .fs-upgrade-button,
+#fs_pricing #fs_pricing_app .fs-package.fs-free-plan .fs-upgrade-button-container .fs-upgrade-button:hover:not(:disabled),
+#fs_pricing #fs_pricing_app .fs-package.fs-free-plan .fs-upgrade-button-container .fs-upgrade-button:focus:not(:disabled) {
+	background: var(--wb-surface);
+	border-color: var(--wb-line);
+	color: var(--wb-ink-soft);
+}
+#fs_pricing #fs_pricing_app .fs-package.fs-free-plan .fs-upgrade-button-container .fs-upgrade-button:hover:not(:disabled) {
+	background: var(--wb-surface-alt);
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-button:disabled,
+#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container .fs-upgrade-button:disabled {
+	background: var(--wb-surface-alt);
+	border-color: var(--wb-line);
+	color: var(--wb-ink-faint);
+	cursor: default;
+	opacity: 1;
+}
+
+/* "All Lite features" line under the Pro button */
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features {
+	margin: 14px 24px 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features li,
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features li:not(:first-child) {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: var(--wb-ink-soft);
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features li .fs-icon svg {
+	fill: var(--wb-good);
+}
+#fs_pricing #fs_pricing_app .fs-package .fs-plan-features li .fs-feature-title strong {
+	font-weight: 500;
+}
+
+/* Tooltips: keep the SDK behaviour, soften the look */
+#fs_pricing #fs_pricing_app .fs-tooltip .fs-tooltip-message {
+	border-radius: 6px;
+	font-size: 12px;
+	line-height: 1.45;
+	box-shadow: 0 4px 16px -4px rgba(29, 35, 39, 0.35);
+}
+
+/* ---------- Below the plans ---------- */
+#fs_pricing #fs_pricing_app .fs-section--custom-implementation {
+	display: none;
+}
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 24px 0 0;
+	padding: 16px 20px;
+	background: var(--wb-surface);
+	border: 1px solid var(--wb-line);
+	border-radius: var(--wb-radius);
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee img {
+	display: none;
+}
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee .fs-money-back-guarantee-title {
+	flex: 0 0 auto;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee .fs-money-back-guarantee-message {
+	flex: 1 1 auto;
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--wb-ink-soft);
+}
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee .fs-button,
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee .fs-button.fs-button--size-small {
+	display: inline-block;
+	width: auto;
+	flex: 0 0 auto;
+	padding: 6px 12px;
+	font-size: 12px;
+	background: var(--wb-surface);
+	border-color: var(--wb-line);
+	color: var(--wb-ink-soft);
+}
+#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee .fs-button:hover:not(:disabled) {
+	background: var(--wb-surface-alt);
+	border-color: var(--wb-line);
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-section--badges {
+	margin: 16px 0 0;
+	padding: 0;
+	background: none;
+	border: 0;
+}
+#fs_pricing #fs_pricing_app .fs-section--badges .fs-badges {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 8px 28px;
+	margin: 0;
+	padding: 0;
+}
+#fs_pricing #fs_pricing_app .fs-section--badges .fs-badges__item img {
+	height: auto;
+	max-height: 30px;
+	max-width: 180px;
+	width: auto;
+	filter: grayscale(1);
+	opacity: 0.55;
+	transition: opacity 120ms ease-out, filter 120ms ease-out;
+}
+#fs_pricing #fs_pricing_app .fs-section--badges .fs-badges__item:hover img {
+	filter: none;
+	opacity: 1;
+}
+
+/* FAQ: a quiet list, not a wall of dark boxes */
+#fs_pricing #fs_pricing_app .fs-section--faq {
+	margin: 40px 0 0;
+	padding: 0;
+	background: none;
+	border: 0;
+}
+#fs_pricing #fs_pricing_app .fs-section--faq .fs-section-header {
+	margin: 0 0 8px;
+	padding: 0;
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-section--faq .fs-section-header h2 {
+	margin: 0;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	color: var(--wb-ink);
+}
+#fs_pricing #fs_pricing_app .fs-section--faq .fs-section--faq-items {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 32px;
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+#fs_pricing #fs_pricing_app .fs-section--faq .fs-section--faq-item {
+	margin: 0;
+	padding: 14px 0;
+	border: 0;
+	border-top: 1px solid var(--wb-line);
+	background: none;
+	box-shadow: none;
+	border-radius: 0;
+	text-align: left;
+}
+#fs_pricing #fs_pricing_app .fs-section--faq .fs-section--faq-item h3 {
+	margin: 0 0 4px;
+	padding: 0;
+	background: none;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0;
+	color: var(--wb-ink);
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+#fs_pricing #fs_pricing_app .fs-section--faq .fs-section--faq-item p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 13px;
+	line-height: 1.55;
+	color: var(--wb-ink-soft);
+}
+#fs_pricing #fs_pricing_app .fs-section--faq a {
+	color: var(--wb-blue);
+}
+
+/* ---------- Narrow screens (WordPress folds the admin at 782px) ---------- */
+@media (max-width: 960px) {
+	#fs_pricing #fs_pricing_app .fs-packages {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	#fs_pricing #fs_pricing_app .fs-packages .fs-package.fs-featured-plan {
+		order: -1;
+	}
+	#fs_pricing #fs_pricing_app .fs-section--faq .fs-section--faq-items {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	#fs_pricing #fs_pricing_app .fs-section--money-back-guarantee {
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 600px) {
+	#fs_pricing #fs_pricing_app {
+		padding: 4px 12px 32px;
+	}
+	#fs_pricing #fs_pricing_app .fs-package .fs-package-content {
+		padding-bottom: 20px;
+	}
+	#fs_pricing #fs_pricing_app .fs-package .fs-plan-description,
+	#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-amount,
+	#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-cycle,
+	#fs_pricing #fs_pricing_app .fs-package .fs-selected-pricing-license-quantity {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features,
+	#fs_pricing #fs_pricing_app .fs-package .fs-upgrade-button-container,
+	#fs_pricing #fs_pricing_app .fs-package .fs-plan-features {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+	#fs_pricing #fs_pricing_app .fs-package .fs-license-quantities {
+		width: calc(100% - 32px);
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+	#fs_pricing #fs_pricing_app .fs-package .fs-support-and-main-features .fs-plan-features-with-value li > .fs-feature-title > span:first-child {
+		min-width: 72px;
+	}
+}
