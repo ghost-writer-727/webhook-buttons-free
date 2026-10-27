@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import { __ } from '@wordpress/i18n';
 import { Trash2, ChevronDown, ChevronRight, GripVertical, Plus } from 'lucide-react';
 import { MetaBox as MetaBoxType, Button as ButtonType } from '../types';
 import { Button as ButtonComponent } from './Button';
@@ -101,7 +102,7 @@ export const MetaBox: React.FC<MetaBoxProps> = ({
         <input
           type="text"
           className="flex-grow px-3 py-1.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Box title (shown on the order screen)"
+          placeholder={__('Box title (shown on the order screen)', 'webhook-buttons')}
           value={group.title}
           onChange={(e) => change({ title: e.target.value })}
         />
@@ -111,8 +112,8 @@ export const MetaBox: React.FC<MetaBoxProps> = ({
             type="button"
             className="p-1.5 bg-red-100 text-red-600 rounded-md hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500"
             onClick={() => onDelete(index)}
-            title="Delete box"
-            aria-label="Delete box"
+            title={__('Delete box', 'webhook-buttons')}
+            aria-label={__('Delete box', 'webhook-buttons')}
           >
             <Trash2 size={16} />
           </button>
@@ -129,15 +130,15 @@ export const MetaBox: React.FC<MetaBoxProps> = ({
 
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <h3 className="text-sm font-medium text-gray-700">Buttons</h3>
+              <h3 className="text-sm font-medium text-gray-700">{__('Buttons', 'webhook-buttons')}</h3>
               <button
                 type="button"
                 className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center gap-1 text-sm"
                 onClick={addButton}
-                title="Add button"
+                title={__('Add button', 'webhook-buttons')}
               >
                 <Plus size={14} />
-                Add button
+                {__('Add button', 'webhook-buttons')}
               </button>
             </div>
 
@@ -158,7 +159,7 @@ export const MetaBox: React.FC<MetaBoxProps> = ({
 
               {group.buttons.length === 0 && (
                 <div className="text-center py-6 bg-gray-50 border border-dashed border-gray-300 rounded-md">
-                  <p className="text-sm text-gray-500">No buttons yet</p>
+                  <p className="text-sm text-gray-500">{__('No buttons yet', 'webhook-buttons')}</p>
                 </div>
               )}
             </div>

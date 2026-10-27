@@ -1,4 +1,5 @@
 import React from 'react';
+import { __ } from '@wordpress/i18n';
 import { Send, Settings2 } from 'lucide-react';
 
 interface NavigationProps {
@@ -21,7 +22,7 @@ export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }
           >
             <div className="flex items-center gap-2">
               <Send size={18} />
-              Buttons
+              {__('Buttons', 'webhook-buttons')}
             </div>
           </button>
           <button
@@ -34,7 +35,7 @@ export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }
           >
             <div className="flex items-center gap-2">
               <Settings2 size={18} />
-              Advanced settings
+              {__('Advanced settings', 'webhook-buttons')}
             </div>
           </button>
         </nav>

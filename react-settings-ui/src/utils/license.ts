@@ -2,6 +2,7 @@
  * What this store may do, as the server reports it (see includes/classes/License.php).
  * Everything in the Lite build works without limits; Pro is extra code that the Lite build does not have.
  */
+import { __ } from '@wordpress/i18n';
 import { hasPro } from '../pro';
 
 interface LicenseInfo {
@@ -21,5 +22,5 @@ export const showSample = license.pro && hasPro;
 export const proNotice = license.pro
   ? null
   : hasPro
-    ? 'Pro options are off because there is no active license. Your saved Pro settings are kept.'
-    : 'This is the free version. Pro adds custom fields, flat data, staff notes, user access control, sample sends and auth headers.';
+    ? __('Pro options are off because there is no active license. Your saved Pro settings are kept.', 'webhook-buttons')
+    : __('This is the free version. Pro adds custom fields, flat data, staff notes, user access control, sample sends and auth headers.', 'webhook-buttons');

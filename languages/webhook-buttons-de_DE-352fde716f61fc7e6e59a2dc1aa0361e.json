@@ -1,0 +1,294 @@
+{
+    "translation-revision-date": "2026-10-27 15:22+0000",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "react-settings-ui\/dist\/assets\/main.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de_DE",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Settings saved.": [
+                "Einstellungen gespeichert."
+            ],
+            "Pro options are off because there is no active license. Your saved Pro settings are kept.": [
+                "Die Pro-Optionen sind deaktiviert, weil keine aktive Lizenz vorhanden ist. Deine gespeicherten Pro-Einstellungen bleiben erhalten."
+            ],
+            "Button %d": [
+                "Button %d"
+            ],
+            "Sample data": [
+                "Beispieldaten"
+            ],
+            "Delete button": [
+                "Button l\u00f6schen"
+            ],
+            "When clicked": [
+                "Beim Klick"
+            ],
+            "Ask to confirm first": [
+                "Erst best\u00e4tigen lassen"
+            ],
+            "Send right away": [
+                "Sofort senden"
+            ],
+            "Webhook URL": [
+                "Webhook-URL"
+            ],
+            "This URL is not encrypted. Order data (names, emails, phones) will travel as plain text. Use https:\/\/ if you can.": [
+                "Diese URL ist nicht verschl\u00fcsselt. Bestelldaten (Namen, E-Mails, Telefonnummern) werden im Klartext \u00fcbertragen. Verwende nach M\u00f6glichkeit https:\/\/."
+            ],
+            "Confirmation message": [
+                "Best\u00e4tigungstext"
+            ],
+            "Message shown before sending": [
+                "Text, der vor dem Senden angezeigt wird"
+            ],
+            "Options": [
+                "Optionen"
+            ],
+            "Enable this button": [
+                "Diesen Button aktivieren"
+            ],
+            "Box title (shown on the order screen)": [
+                "Titel der Box (wird in der Bestellansicht angezeigt)"
+            ],
+            "Delete box": [
+                "Box l\u00f6schen"
+            ],
+            "Buttons": [
+                "Buttons"
+            ],
+            "Add button": [
+                "Button hinzuf\u00fcgen"
+            ],
+            "No buttons yet": [
+                "Noch keine Buttons"
+            ],
+            "Loading\u2026": [
+                "Wird geladen \u2026"
+            ],
+            "Failed to load settings. Please refresh the page to try again.": [
+                "Die Einstellungen konnten nicht geladen werden. Bitte lade die Seite neu."
+            ],
+            "Could not save settings. Please try again.": [
+                "Die Einstellungen konnten nicht gespeichert werden. Bitte versuche es erneut."
+            ],
+            "Error": [
+                "Fehler"
+            ],
+            "Loading buttons\u2026": [
+                "Buttons werden geladen \u2026"
+            ],
+            "Add buttons to the order screen. Each button sends the order to a webhook URL.": [
+                "F\u00fcge Buttons zur Bestellansicht hinzu. Jeder Button sendet die Bestellung an eine Webhook-URL."
+            ],
+            "Undo all changes": [
+                "Alle \u00c4nderungen verwerfen"
+            ],
+            "No changes to undo": [
+                "Keine \u00c4nderungen zum Verwerfen"
+            ],
+            "Undo all": [
+                "Alles verwerfen"
+            ],
+            "Save all changes": [
+                "Alle \u00c4nderungen speichern"
+            ],
+            "All changes saved": [
+                "Alle \u00c4nderungen gespeichert"
+            ],
+            "Saving\u2026": [
+                "Wird gespeichert \u2026"
+            ],
+            "Save all": [
+                "Alles speichern"
+            ],
+            "Upgrade to Pro": [
+                "Auf Pro upgraden"
+            ],
+            "Button boxes": [
+                "Button-Boxen"
+            ],
+            "Each box shows on the order screen with its buttons.": [
+                "Jede Box wird mit ihren Buttons in der Bestellansicht angezeigt."
+            ],
+            "Add box": [
+                "Box hinzuf\u00fcgen"
+            ],
+            "Buttons appear in a box on the order screen.": [
+                "Buttons erscheinen in einer Box in der Bestellansicht."
+            ],
+            "Add your first button": [
+                "Ersten Button hinzuf\u00fcgen"
+            ],
+            "Tips": [
+                "Tipps"
+            ],
+            "Drag the grip handle to reorder boxes and buttons.": [
+                "Ziehe am Griff, um Boxen und Buttons neu anzuordnen."
+            ],
+            "Click the arrow to open or close a box or button.": [
+                "Klicke auf den Pfeil, um eine Box oder einen Button auf- oder zuzuklappen."
+            ],
+            "A button shows on the order screen only when it is enabled and has a webhook URL.": [
+                "Ein Button wird nur in der Bestellansicht angezeigt, wenn er aktiviert ist und eine Webhook-URL hat."
+            ],
+            "Click \u201cSave all\u201d to keep your changes.": [
+                "Klicke auf \u201eAlles speichern\u201c, um deine \u00c4nderungen zu behalten."
+            ],
+            "Select options\u2026": [
+                "Optionen ausw\u00e4hlen \u2026"
+            ],
+            "Search options\u2026": [
+                "Optionen durchsuchen \u2026"
+            ],
+            "No options found": [
+                "Keine Optionen gefunden"
+            ],
+            "All options selected": [
+                "Alle Optionen ausgew\u00e4hlt"
+            ],
+            "The server sent unexpected data. Please refresh and try again.": [
+                "Der Server hat unerwartete Daten gesendet. Bitte lade die Seite neu und versuche es erneut."
+            ],
+            "Loading advanced settings\u2026": [
+                "Erweiterte Einstellungen werden geladen \u2026"
+            ],
+            "Advanced settings": [
+                "Erweiterte Einstellungen"
+            ],
+            "Extra options for the data each button sends": [
+                "Zus\u00e4tzliche Optionen f\u00fcr die Daten, die jeder Button sendet"
+            ],
+            "Undo changes": [
+                "\u00c4nderungen verwerfen"
+            ],
+            "Save changes": [
+                "\u00c4nderungen speichern"
+            ],
+            "General": [
+                "Allgemein"
+            ],
+            "Exclude product attributes": [
+                "Produktattribute ausschlie\u00dfen"
+            ],
+            "Select attributes to leave out\u2026": [
+                "Attribute ausw\u00e4hlen, die weggelassen werden \u2026"
+            ],
+            "These product attributes are not sent.": [
+                "Diese Produktattribute werden nicht gesendet."
+            ],
+            "All settings saved": [
+                "Alle Einstellungen gespeichert"
+            ],
+            "Pro options": [
+                "Pro-Optionen"
+            ],
+            "(needs an active license)": [
+                "(ben\u00f6tigt eine aktive Lizenz)"
+            ],
+            "Visible to": [
+                "Sichtbar f\u00fcr"
+            ],
+            "All users who can edit orders": [
+                "Alle Benutzer, die Bestellungen bearbeiten d\u00fcrfen"
+            ],
+            "Let the user add a note": [
+                "Benutzer darf eine Notiz hinzuf\u00fcgen"
+            ],
+            "(needs \u201cAsk to confirm first\u201d)": [
+                "(ben\u00f6tigt \u201eErst best\u00e4tigen lassen\u201c)"
+            ],
+            "Send flat data (one level, for tools that cannot read nested fields)": [
+                "Flache Daten senden (eine Ebene, f\u00fcr Tools, die keine verschachtelten Felder lesen k\u00f6nnen)"
+            ],
+            "Auth header (optional)": [
+                "Auth-Header (optional)"
+            ],
+            "Header name, for example X-Api-Key": [
+                "Header-Name, zum Beispiel X-Api-Key"
+            ],
+            "Header value (secret)": [
+                "Header-Wert (geheim)"
+            ],
+            "Sent with every request from this button. Stored in your WordPress database.": [
+                "Wird mit jeder Anfrage dieses Buttons gesendet. Wird in deiner WordPress-Datenbank gespeichert."
+            ],
+            "(Pro, needs an active license)": [
+                "(Pro, ben\u00f6tigt eine aktive Lizenz)"
+            ],
+            "Order meta keys": [
+                "Bestell-Metaschl\u00fcssel"
+            ],
+            "Send extra order fields saved by other plugins (Advanced Custom Fields, Checkout Field Editor, and more). Pick the keys below. They are sent with every button under custom_fields, named by key.": [
+                "Sende zus\u00e4tzliche Bestellfelder, die andere Plugins speichern (Advanced Custom Fields, Checkout Field Editor und mehr). W\u00e4hle unten die Schl\u00fcssel aus. Sie werden mit jedem Button unter custom_fields gesendet, benannt nach Schl\u00fcssel."
+            ],
+            "Pick meta keys to send\u2026": [
+                "Metaschl\u00fcssel zum Senden ausw\u00e4hlen \u2026"
+            ],
+            "No order meta found yet. Create an order first.": [
+                "Noch keine Bestell-Metadaten gefunden. Lege zuerst eine Bestellung an."
+            ],
+            "Keys come from your last 200 orders. Keys that start with \u201c_\u201d are private plugin data.": [
+                "Die Schl\u00fcssel stammen aus deinen letzten 200 Bestellungen. Schl\u00fcssel, die mit \u201e_\u201c beginnen, sind private Plugin-Daten."
+            ],
+            "Custom order fields": [
+                "Eigene Bestellfelder"
+            ],
+            "No Admin Custom Order Fields plugin found. When it is active, every custom order field is sent under custom_fields automatically.": [
+                "Kein Admin-Custom-Order-Fields-Plugin gefunden. Wenn es aktiv ist, wird jedes eigene Bestellfeld automatisch unter custom_fields gesendet."
+            ],
+            "These fields are sent with every order under custom_fields. The key never changes, even if you rename the field.": [
+                "Diese Felder werden mit jeder Bestellung unter custom_fields gesendet. Der Schl\u00fcssel \u00e4ndert sich nie, auch wenn du das Feld umbenennst."
+            ],
+            "Could not build the sample.": [
+                "Das Beispiel konnte nicht erstellt werden."
+            ],
+            "Could not send the sample.": [
+                "Das Beispiel konnte nicht gesendet werden."
+            ],
+            "Close": [
+                "Schlie\u00dfen"
+            ],
+            "What this button sends": [
+                "Was dieser Button sendet"
+            ],
+            "Send a sample to your webhook so Zapier, Make or n8n can see every field. Tools only let you map fields they have seen, so pick at least as many items as your biggest real order.": [
+                "Sende ein Beispiel an deinen Webhook, damit Zapier, Make oder n8n alle Felder sehen. Diese Tools lassen dich nur Felder zuordnen, die sie schon gesehen haben. W\u00e4hle also mindestens so viele Positionen wie deine gr\u00f6\u00dfte echte Bestellung."
+            ],
+            "Items in sample": [
+                "Positionen im Beispiel"
+            ],
+            "Copied!": [
+                "Kopiert!"
+            ],
+            "Copy JSON": [
+                "JSON kopieren"
+            ],
+            "Building sample\u2026": [
+                "Beispiel wird erstellt \u2026"
+            ],
+            "Sample values only. Sending a sample does not count as a free send.": [
+                "Nur Beispielwerte. Das Senden eines Beispiels z\u00e4hlt nicht als kostenloser Versand."
+            ],
+            "Post this sample to the webhook URL": [
+                "Dieses Beispiel an die Webhook-URL senden"
+            ],
+            "Add a webhook URL first": [
+                "F\u00fcge zuerst eine Webhook-URL hinzu"
+            ],
+            "Sending\u2026": [
+                "Wird gesendet \u2026"
+            ],
+            "Send sample to webhook": [
+                "Beispiel an Webhook senden"
+            ],
+            "This is the free version. Pro adds custom fields, flat data, staff notes, user access control, sample sends and auth headers.": [
+                "Das ist die kostenlose Version. Pro bietet zus\u00e4tzlich eigene Felder, flache Daten, Mitarbeiter-Notizen, Zugriffskontrolle f\u00fcr Benutzer, Beispiel-Sendungen und Auth-Header."
+            ]
+        }
+    }
+}

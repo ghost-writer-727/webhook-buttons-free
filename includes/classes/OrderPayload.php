@@ -43,7 +43,7 @@ class OrderPayload {
 	}
 
 	public function get_status() {
-		return $this->response['status_note'] ?? 'Not sent yet.';
+		return $this->response['status_note'] ?? __( 'Not sent yet.', 'webhook-buttons' );
 	}
 
 	public function error() {
@@ -51,7 +51,7 @@ class OrderPayload {
 	}
 
 	public function get_response() {
-		return $this->response ?? 'No response from the webhook.';
+		return $this->response ?? __( 'No response from the webhook.', 'webhook-buttons' );
 	}
 
 	public function set_url( $url ) {
@@ -243,17 +243,17 @@ class OrderPayload {
 	public function submit( ?Button $button = null ) {
 		if ( ! $this->url ) {
 			$this->err                     = true;
-			$this->response['status_note'] = 'Not sent. The webhook URL is missing.';
+			$this->response['status_note'] = __( 'Not sent. The webhook URL is missing.', 'webhook-buttons' );
 			return false;
 		}
 		if ( ! filter_var( $this->url, FILTER_VALIDATE_URL ) ) {
 			$this->err                     = true;
-			$this->response['status_note'] = 'Not sent. The webhook URL is not valid.';
+			$this->response['status_note'] = __( 'Not sent. The webhook URL is not valid.', 'webhook-buttons' );
 			return false;
 		}
 		if ( ! $this->data ) {
 			$this->err                     = true;
-			$this->response['status_note'] = 'Not sent. No order data was found.';
+			$this->response['status_note'] = __( 'Not sent. No order data was found.', 'webhook-buttons' );
 			return false;
 		}
 
@@ -275,7 +275,7 @@ class OrderPayload {
 		if ( is_wp_error( $response ) ) {
 			$this->err                     = true;
 			$this->log_detail              = $response->get_error_message();
-			$this->response['status_note'] = 'Not sent. The webhook could not be reached.';
+			$this->response['status_note'] = __( 'Not sent. The webhook could not be reached.', 'webhook-buttons' );
 			return false;
 		}
 
@@ -287,9 +287,9 @@ class OrderPayload {
 		if ( $code < 200 || $code > 299 ) {
 			$this->err                     = true;
 			$this->log_detail              = 'HTTP ' . $code . ' ' . substr( wp_remote_retrieve_body( $response ), 0, 500 );
-			$this->response['status_note'] = sprintf( 'Not sent. The webhook answered with HTTP %d.', $code );
+			$this->response['status_note'] = sprintf( /* translators: %d: HTTP status code */ __( 'Not sent. The webhook answered with HTTP %d.', 'webhook-buttons' ), $code );
 		} elseif ( empty( $this->data['items'] ) ) {
-			$this->response['status_note'] = 'Sent. Note: the order has no products.';
+			$this->response['status_note'] = __( 'Sent. Note: the order has no products.', 'webhook-buttons' );
 		} else {
 			$this->response['status_note'] = '';
 		}

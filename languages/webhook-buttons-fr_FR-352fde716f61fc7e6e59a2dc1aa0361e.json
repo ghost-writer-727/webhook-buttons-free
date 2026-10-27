@@ -1,0 +1,294 @@
+{
+    "translation-revision-date": "2026-10-27 15:22+0000",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "react-settings-ui\/dist\/assets\/main.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "Settings saved.": [
+                "R\u00e9glages enregistr\u00e9s."
+            ],
+            "Pro options are off because there is no active license. Your saved Pro settings are kept.": [
+                "Les options Pro sont d\u00e9sactiv\u00e9es car aucune licence n\u2019est active. Vos r\u00e9glages Pro enregistr\u00e9s sont conserv\u00e9s."
+            ],
+            "Button %d": [
+                "Bouton %d"
+            ],
+            "Sample data": [
+                "Donn\u00e9es d\u2019exemple"
+            ],
+            "Delete button": [
+                "Supprimer le bouton"
+            ],
+            "When clicked": [
+                "Au clic"
+            ],
+            "Ask to confirm first": [
+                "Demander une confirmation d\u2019abord"
+            ],
+            "Send right away": [
+                "Envoyer imm\u00e9diatement"
+            ],
+            "Webhook URL": [
+                "URL du webhook"
+            ],
+            "This URL is not encrypted. Order data (names, emails, phones) will travel as plain text. Use https:\/\/ if you can.": [
+                "Cette URL n\u2019est pas chiffr\u00e9e. Les donn\u00e9es de commande (noms, e-mails, t\u00e9l\u00e9phones) circuleront en clair. Utilisez https:\/\/ si possible."
+            ],
+            "Confirmation message": [
+                "Message de confirmation"
+            ],
+            "Message shown before sending": [
+                "Message affich\u00e9 avant l\u2019envoi"
+            ],
+            "Options": [
+                "Options"
+            ],
+            "Enable this button": [
+                "Activer ce bouton"
+            ],
+            "Box title (shown on the order screen)": [
+                "Titre du bloc (affich\u00e9 sur l\u2019\u00e9cran de commande)"
+            ],
+            "Delete box": [
+                "Supprimer le bloc"
+            ],
+            "Buttons": [
+                "Boutons"
+            ],
+            "Add button": [
+                "Ajouter un bouton"
+            ],
+            "No buttons yet": [
+                "Aucun bouton pour le moment"
+            ],
+            "Loading\u2026": [
+                "Chargement\u2026"
+            ],
+            "Failed to load settings. Please refresh the page to try again.": [
+                "Impossible de charger les r\u00e9glages. Veuillez actualiser la page pour r\u00e9essayer."
+            ],
+            "Could not save settings. Please try again.": [
+                "Impossible d\u2019enregistrer les r\u00e9glages. Veuillez r\u00e9essayer."
+            ],
+            "Error": [
+                "Erreur"
+            ],
+            "Loading buttons\u2026": [
+                "Chargement des boutons\u2026"
+            ],
+            "Add buttons to the order screen. Each button sends the order to a webhook URL.": [
+                "Ajoutez des boutons \u00e0 l\u2019\u00e9cran de commande. Chaque bouton envoie la commande \u00e0 une URL de webhook."
+            ],
+            "Undo all changes": [
+                "Annuler toutes les modifications"
+            ],
+            "No changes to undo": [
+                "Aucune modification \u00e0 annuler"
+            ],
+            "Undo all": [
+                "Tout annuler"
+            ],
+            "Save all changes": [
+                "Enregistrer toutes les modifications"
+            ],
+            "All changes saved": [
+                "Toutes les modifications sont enregistr\u00e9es"
+            ],
+            "Saving\u2026": [
+                "Enregistrement\u2026"
+            ],
+            "Save all": [
+                "Tout enregistrer"
+            ],
+            "Upgrade to Pro": [
+                "Passer \u00e0 Pro"
+            ],
+            "Button boxes": [
+                "Blocs de boutons"
+            ],
+            "Each box shows on the order screen with its buttons.": [
+                "Chaque bloc appara\u00eet sur l\u2019\u00e9cran de commande avec ses boutons."
+            ],
+            "Add box": [
+                "Ajouter un bloc"
+            ],
+            "Buttons appear in a box on the order screen.": [
+                "Les boutons apparaissent dans un bloc sur l\u2019\u00e9cran de commande."
+            ],
+            "Add your first button": [
+                "Ajouter votre premier bouton"
+            ],
+            "Tips": [
+                "Astuces"
+            ],
+            "Drag the grip handle to reorder boxes and buttons.": [
+                "Faites glisser la poign\u00e9e pour r\u00e9ordonner les blocs et les boutons."
+            ],
+            "Click the arrow to open or close a box or button.": [
+                "Cliquez sur la fl\u00e8che pour ouvrir ou fermer un bloc ou un bouton."
+            ],
+            "A button shows on the order screen only when it is enabled and has a webhook URL.": [
+                "Un bouton n\u2019appara\u00eet sur l\u2019\u00e9cran de commande que s\u2019il est activ\u00e9 et poss\u00e8de une URL de webhook."
+            ],
+            "Click \u201cSave all\u201d to keep your changes.": [
+                "Cliquez sur \u00ab\u00a0Tout enregistrer\u00a0\u00bb pour conserver vos modifications."
+            ],
+            "Select options\u2026": [
+                "S\u00e9lectionner des options\u2026"
+            ],
+            "Search options\u2026": [
+                "Rechercher des options\u2026"
+            ],
+            "No options found": [
+                "Aucune option trouv\u00e9e"
+            ],
+            "All options selected": [
+                "Toutes les options sont s\u00e9lectionn\u00e9es"
+            ],
+            "The server sent unexpected data. Please refresh and try again.": [
+                "Le serveur a renvoy\u00e9 des donn\u00e9es inattendues. Veuillez actualiser la page et r\u00e9essayer."
+            ],
+            "Loading advanced settings\u2026": [
+                "Chargement des r\u00e9glages avanc\u00e9s\u2026"
+            ],
+            "Advanced settings": [
+                "R\u00e9glages avanc\u00e9s"
+            ],
+            "Extra options for the data each button sends": [
+                "Options suppl\u00e9mentaires pour les donn\u00e9es envoy\u00e9es par chaque bouton"
+            ],
+            "Undo changes": [
+                "Annuler les modifications"
+            ],
+            "Save changes": [
+                "Enregistrer les modifications"
+            ],
+            "General": [
+                "G\u00e9n\u00e9ral"
+            ],
+            "Exclude product attributes": [
+                "Exclure des attributs de produit"
+            ],
+            "Select attributes to leave out\u2026": [
+                "S\u00e9lectionner les attributs \u00e0 exclure\u2026"
+            ],
+            "These product attributes are not sent.": [
+                "Ces attributs de produit ne sont pas envoy\u00e9s."
+            ],
+            "All settings saved": [
+                "Tous les r\u00e9glages sont enregistr\u00e9s"
+            ],
+            "Pro options": [
+                "Options Pro"
+            ],
+            "(needs an active license)": [
+                "(n\u00e9cessite une licence active)"
+            ],
+            "Visible to": [
+                "Visible par"
+            ],
+            "All users who can edit orders": [
+                "Tous les utilisateurs pouvant modifier les commandes"
+            ],
+            "Let the user add a note": [
+                "Autoriser l\u2019utilisateur \u00e0 ajouter une note"
+            ],
+            "(needs \u201cAsk to confirm first\u201d)": [
+                "(n\u00e9cessite \u00ab\u00a0Demander une confirmation d\u2019abord\u00a0\u00bb)"
+            ],
+            "Send flat data (one level, for tools that cannot read nested fields)": [
+                "Envoyer des donn\u00e9es \u00e0 plat (un seul niveau, pour les outils qui ne lisent pas les champs imbriqu\u00e9s)"
+            ],
+            "Auth header (optional)": [
+                "En-t\u00eate d\u2019authentification (facultatif)"
+            ],
+            "Header name, for example X-Api-Key": [
+                "Nom de l\u2019en-t\u00eate, par exemple X-Api-Key"
+            ],
+            "Header value (secret)": [
+                "Valeur de l\u2019en-t\u00eate (secr\u00e8te)"
+            ],
+            "Sent with every request from this button. Stored in your WordPress database.": [
+                "Envoy\u00e9 avec chaque requ\u00eate de ce bouton. Stock\u00e9 dans votre base de donn\u00e9es WordPress."
+            ],
+            "(Pro, needs an active license)": [
+                "(Pro, n\u00e9cessite une licence active)"
+            ],
+            "Order meta keys": [
+                "Cl\u00e9s m\u00e9ta de commande"
+            ],
+            "Send extra order fields saved by other plugins (Advanced Custom Fields, Checkout Field Editor, and more). Pick the keys below. They are sent with every button under custom_fields, named by key.": [
+                "Envoyez des champs de commande suppl\u00e9mentaires enregistr\u00e9s par d\u2019autres extensions (Advanced Custom Fields, Checkout Field Editor, etc.). Choisissez les cl\u00e9s ci-dessous. Elles sont envoy\u00e9es avec chaque bouton sous custom_fields, nomm\u00e9es par cl\u00e9."
+            ],
+            "Pick meta keys to send\u2026": [
+                "Choisir les cl\u00e9s m\u00e9ta \u00e0 envoyer\u2026"
+            ],
+            "No order meta found yet. Create an order first.": [
+                "Aucune m\u00e9ta de commande trouv\u00e9e pour le moment. Cr\u00e9ez d\u2019abord une commande."
+            ],
+            "Keys come from your last 200 orders. Keys that start with \u201c_\u201d are private plugin data.": [
+                "Les cl\u00e9s proviennent de vos 200 derni\u00e8res commandes. Les cl\u00e9s commen\u00e7ant par \u00ab\u00a0_\u00a0\u00bb sont des donn\u00e9es priv\u00e9es d\u2019extensions."
+            ],
+            "Custom order fields": [
+                "Champs de commande personnalis\u00e9s"
+            ],
+            "No Admin Custom Order Fields plugin found. When it is active, every custom order field is sent under custom_fields automatically.": [
+                "Extension Admin Custom Order Fields introuvable. Lorsqu\u2019elle est active, chaque champ de commande personnalis\u00e9 est envoy\u00e9 automatiquement sous custom_fields."
+            ],
+            "These fields are sent with every order under custom_fields. The key never changes, even if you rename the field.": [
+                "Ces champs sont envoy\u00e9s avec chaque commande sous custom_fields. La cl\u00e9 ne change jamais, m\u00eame si vous renommez le champ."
+            ],
+            "Could not build the sample.": [
+                "Impossible de g\u00e9n\u00e9rer l\u2019exemple."
+            ],
+            "Could not send the sample.": [
+                "Impossible d\u2019envoyer l\u2019exemple."
+            ],
+            "Close": [
+                "Fermer"
+            ],
+            "What this button sends": [
+                "Ce que ce bouton envoie"
+            ],
+            "Send a sample to your webhook so Zapier, Make or n8n can see every field. Tools only let you map fields they have seen, so pick at least as many items as your biggest real order.": [
+                "Envoyez un exemple \u00e0 votre webhook pour que Zapier, Make ou n8n voient tous les champs. Ces outils ne permettent de mapper que les champs d\u00e9j\u00e0 vus\u00a0: choisissez donc au moins autant d\u2019articles que votre plus grosse commande r\u00e9elle."
+            ],
+            "Items in sample": [
+                "Articles dans l\u2019exemple"
+            ],
+            "Copied!": [
+                "Copi\u00e9\u00a0!"
+            ],
+            "Copy JSON": [
+                "Copier le JSON"
+            ],
+            "Building sample\u2026": [
+                "G\u00e9n\u00e9ration de l\u2019exemple\u2026"
+            ],
+            "Sample values only. Sending a sample does not count as a free send.": [
+                "Valeurs d\u2019exemple uniquement. L\u2019envoi d\u2019un exemple ne compte pas comme un envoi gratuit."
+            ],
+            "Post this sample to the webhook URL": [
+                "Envoyer cet exemple \u00e0 l\u2019URL du webhook"
+            ],
+            "Add a webhook URL first": [
+                "Ajoutez d\u2019abord une URL de webhook"
+            ],
+            "Sending\u2026": [
+                "Envoi\u2026"
+            ],
+            "Send sample to webhook": [
+                "Envoyer l\u2019exemple au webhook"
+            ],
+            "This is the free version. Pro adds custom fields, flat data, staff notes, user access control, sample sends and auth headers.": [
+                "Ceci est la version gratuite. Pro ajoute les champs personnalis\u00e9s, les donn\u00e9es \u00e0 plat, les notes du personnel, le contr\u00f4le d\u2019acc\u00e8s par utilisateur, les envois d\u2019exemple et les en-t\u00eates d\u2019authentification."
+            ]
+        }
+    }
+}

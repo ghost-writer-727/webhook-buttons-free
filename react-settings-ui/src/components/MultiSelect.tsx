@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { __ } from '@wordpress/i18n';
 import { X, ChevronDown, Search } from 'lucide-react';
 
 interface Option {
@@ -19,7 +20,7 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
   options,
   value,
   onChange,
-  placeholder = "Select options...",
+  placeholder,
   className = "",
   disabled = false
 }) => {
@@ -118,7 +119,7 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
                 </span>
               ))
             ) : (
-              <span className="text-gray-500 text-sm py-1">{placeholder}</span>
+              <span className="text-gray-500 text-sm py-1">{placeholder ?? __('Select options…', 'webhook-buttons')}</span>
             )}
           </div>
           <ChevronDown 
@@ -141,7 +142,7 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Search options..."
+                placeholder={__('Search options…', 'webhook-buttons')}
                 className="w-full pr-3 py-2 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2271b1] focus:border-[#2271b1] transition-colors"
                 style={{ paddingLeft: '2.25rem' }}
               />
@@ -162,7 +163,7 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
               ))
             ) : (
               <div className="px-3 py-2 text-sm text-gray-500">
-                {searchTerm ? 'No options found' : 'All options selected'}
+                {searchTerm ? __('No options found', 'webhook-buttons') : __('All options selected', 'webhook-buttons')}
               </div>
             )}
           </div>

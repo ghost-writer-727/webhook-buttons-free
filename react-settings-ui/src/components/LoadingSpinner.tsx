@@ -1,14 +1,15 @@
 import React from 'react';
+import { __ } from '@wordpress/i18n';
 
 interface LoadingSpinnerProps {
   message?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message = 'Loading...' }) => {
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message }) => {
   return (
     <div className="bg-white shadow-sm border border-gray-200 p-8 text-center">
       <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] mb-4"></div>
-      <p className="text-gray-600">{message}</p>
+      <p className="text-gray-600">{message ?? __('Loading…', 'webhook-buttons')}</p>
     </div>
   );
 };

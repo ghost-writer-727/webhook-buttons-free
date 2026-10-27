@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { __ } from '@wordpress/i18n';
 import { Plus, Send, Save, Undo2, AlertCircle } from 'lucide-react';
 import { SettingsData, MetaBox } from '../types';
 import { MetaBox as MetaBoxComponent, newButton } from './MetaBox';
@@ -45,11 +46,11 @@ export const SettingsUI: React.FC = () => {
           setSavedGroupIds(new Set(allGroupIds));
         } else {
           console.error('MetaBoxes not found in API response:', response);
-          setError('Failed to load settings: metaBoxes not found in response');
+          setError(__('Failed to load settings. Please refresh the page to try again.', 'webhook-buttons'));
         }
       } catch (err) {
         console.error('Failed to fetch settings:', err);
-        setError('Failed to load settings. Please refresh the page to try again.');
+        setError(__('Failed to load settings. Please refresh the page to try again.', 'webhook-buttons'));
       } finally {
         setIsLoading(false);
       }
@@ -131,10 +132,10 @@ export const SettingsUI: React.FC = () => {
       // Mark all groups as saved
       const allGroupIds = settings.metaBoxes.map((group: MetaBox) => group.id);
       setSavedGroupIds(new Set(allGroupIds));
-      setNotice({ kind: 'ok', text: 'Settings saved.' });
+      setNotice({ kind: 'ok', text: __('Settings saved.', 'webhook-buttons') });
     } catch (error) {
       console.error('Failed to save all settings:', error);
-      setNotice({ kind: 'error', text: 'Could not save settings. Please try again.' });
+      setNotice({ kind: 'error', text: __('Could not save settings. Please try again.', 'webhook-buttons') });
     } finally {
       setIsSavingAll(false);
     }
@@ -185,14 +186,14 @@ export const SettingsUI: React.FC = () => {
           <div className="mb-6 bg-red-50 border border-red-200 p-4 rounded-md flex items-start gap-3">
             <AlertCircle size={20} className="text-red-500 mt-0.5 flex-shrink-0" />
             <div>
-              <h3 className="text-sm font-medium text-red-800">Error</h3>
+              <h3 className="text-sm font-medium text-red-800">{__('Error', 'webhook-buttons')}</h3>
               <p className="text-sm text-red-700 mt-1">{error}</p>
             </div>
           </div>
         )}
         
         {isLoading ? (
-          <LoadingSpinner message="Loading buttons..." />
+          <LoadingSpinner message={__('Loading buttons…', 'webhook-buttons')} />
         ) : (
           <div className="bg-white shadow-sm border border-gray-200 overflow-hidden">
           <div className="bg-white border-b border-gray-200 px-8 py-6">
@@ -201,7 +202,7 @@ export const SettingsUI: React.FC = () => {
                 <Send className="text-[#2271b1]" size={24} />
                 <div>
                   <h1 className="text-2xl font-bold text-[#1d2327]">Webhook Buttons</h1>
-                  <p className="text-gray-600 mt-1">Add buttons to the order screen. Each button sends the order to a webhook URL.</p>
+                  <p className="text-gray-600 mt-1">{__('Add buttons to the order screen. Each button sends the order to a webhook URL.', 'webhook-buttons')}</p>
                 </div>
               </div>
               
@@ -215,10 +216,10 @@ export const SettingsUI: React.FC = () => {
                       ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       : 'bg-gray-50 text-gray-400 cursor-not-allowed'
                   }`}
-                  title={hasGlobalChanges ? "Undo all changes" : "No changes to undo"}
+                  title={hasGlobalChanges ? __('Undo all changes', 'webhook-buttons') : __('No changes to undo', 'webhook-buttons')}
                 >
                   <Undo2 size={18} />
-                  Undo all
+                  {__('Undo all', 'webhook-buttons')}
                 </button>
                 <button
                   onClick={saveAllGroups}
@@ -228,10 +229,10 @@ export const SettingsUI: React.FC = () => {
                       ? 'bg-[#2271b1] text-[#FFFFFF] hover:bg-[#135e96]'
                       : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }`}
-                  title={hasGlobalChanges ? "Save all changes" : "All changes saved"}
+                  title={hasGlobalChanges ? __('Save all changes', 'webhook-buttons') : __('All changes saved', 'webhook-buttons')}
                 >
                   <Save size={18} />
-                  {isSavingAll ? 'Saving...' : 'Save all'}
+                  {isSavingAll ? __('Saving…', 'webhook-buttons') : __('Save all', 'webhook-buttons')}
                 </button>
               </div>
             </div>
@@ -247,25 +248,25 @@ export const SettingsUI: React.FC = () => {
               <p className="mb-6 text-sm text-gray-700">
                 {proNotice}{' '}
                 {license.upgrade_url && (
-                  <a href={license.upgrade_url} className="text-[#2271b1] underline">Upgrade to Pro</a>
+                  <a href={license.upgrade_url} className="text-[#2271b1] underline">{__('Upgrade to Pro', 'webhook-buttons')}</a>
                 )}
               </p>
             )}
             <div className="flex items-start justify-between mb-8 gap-6">
               <div className="w-1/2">
-                <h2 className="text-xl font-semibold text-[#1d2327]">Button boxes</h2>
+                <h2 className="text-xl font-semibold text-[#1d2327]">{__('Button boxes', 'webhook-buttons')}</h2>
                 <p className="text-sm text-gray-600 mt-1">
-                  Each box shows on the order screen with its buttons.
+                  {__('Each box shows on the order screen with its buttons.', 'webhook-buttons')}
                 </p>
               </div>
               <div className="flex items-center gap-3 flex-shrink-0">
                 <button
                   onClick={addMetaBox}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-[#2271b1] text-[#FFFFFF] font-medium hover:bg-[#135e96] transition-colors shadow-sm"
-                  title="Add box"
+                  title={__('Add box', 'webhook-buttons')}
                 >
                   <Plus size={18} />
-                  Add box
+                  {__('Add box', 'webhook-buttons')}
                 </button>
               </div>
             </div>
@@ -288,15 +289,15 @@ export const SettingsUI: React.FC = () => {
               {settingsData.metaBoxes.length === 0 && (
                 <div className="text-center py-16 bg-[#f0f0f1] border-2 border-dashed border-gray-300">
                   <Send className="mx-auto text-gray-400 mb-4" size={48} />
-                  <h3 className="text-lg font-medium text-[#1d2327] mb-2">No buttons yet</h3>
-                  <p className="text-gray-600 mb-6">Buttons appear in a box on the order screen.</p>
+                  <h3 className="text-lg font-medium text-[#1d2327] mb-2">{__('No buttons yet', 'webhook-buttons')}</h3>
+                  <p className="text-gray-600 mb-6">{__('Buttons appear in a box on the order screen.', 'webhook-buttons')}</p>
                   <button
                     onClick={addFirstButton}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#2271b1] text-[#FFFFFF] font-medium hover:bg-[#135e96] transition-colors shadow-sm"
-                    title="Add your first button"
+                    title={__('Add your first button', 'webhook-buttons')}
                   >
                     <Plus size={18} />
-                    Add your first button
+                    {__('Add your first button', 'webhook-buttons')}
                   </button>
                 </div>
               )}
@@ -304,12 +305,12 @@ export const SettingsUI: React.FC = () => {
 
             {settingsData.metaBoxes.length > 0 && (
               <div className="mt-8 p-4 bg-[#f0f0f1] border border-gray-200">
-                <h3 className="text-sm font-medium text-[#1d2327] mb-2">Tips</h3>
+                <h3 className="text-sm font-medium text-[#1d2327] mb-2">{__('Tips', 'webhook-buttons')}</h3>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Drag the grip handle to reorder boxes and buttons.</li>
-                  <li>• Click the arrow to open or close a box or button.</li>
-                  <li>• A button shows on the order screen only when it is enabled and has a webhook URL.</li>
-                  <li>• Click "Save all" to keep your changes.</li>
+                  <li>• {__('Drag the grip handle to reorder boxes and buttons.', 'webhook-buttons')}</li>
+                  <li>• {__('Click the arrow to open or close a box or button.', 'webhook-buttons')}</li>
+                  <li>• {__('A button shows on the order screen only when it is enabled and has a webhook URL.', 'webhook-buttons')}</li>
+                  <li>• {__('Click “Save all” to keep your changes.', 'webhook-buttons')}</li>
                 </ul>
               </div>
             )}

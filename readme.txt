@@ -4,7 +4,7 @@ Tags: woocommerce, webhook, orders, automation, buttons
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,9 +68,11 @@ Any service that gives you a webhook URL that accepts a JSON POST: Zapier, Make,
 
 = Can I send to a tool on the same server (localhost)? =
 
-By default WordPress refuses requests to localhost and private network addresses, which protects shared hosts. To allow your own n8n or similar on the same machine, add one line to your theme or a small plugin:
+By default WordPress refuses requests to localhost and private network addresses (10.x, 192.168.x, 172.16-31.x, 100.64-127.x) and to any port other than 80, 443 and 8080. This protects shared hosts. To allow your own n8n or similar on the same machine, add these two lines to your theme or a small plugin. The first allows the host, the second allows its port. Change both to yours:
 
-`add_filter( 'http_request_host_is_external', fn( $external, $host ) => $host === 'localhost' ? true : $external, 10, 2 );`
+`add_filter( 'http_request_host_is_external', fn( $external, $host ) => $host === '192.168.1.20' ? true : $external, 10, 2 );`
+
+`add_filter( 'http_allowed_safe_ports', fn( $ports, $host ) => $host === '192.168.1.20' ? array_merge( $ports, [ 5678 ] ) : $ports, 10, 2 );`
 
 = Why does the settings page warn about http:// URLs? =
 
@@ -131,6 +133,10 @@ Build the release zips with `scripts/build.sh` in the product folder (freemius, 
 3. The order data as received by a webhook.
 
 == Changelog ==
+
+= 1.0.5 =
+* Ready for translation: every string on the settings page and the order screen can now be translated. German, Spanish and French are included.
+* FAQ: the localhost answer now also covers the port rule (`http_allowed_safe_ports`).
 
 = 1.0.4 =
 * One review request after your store has sent 5 orders. Dismiss it for good or snooze it for 30 days.

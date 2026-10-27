@@ -1,0 +1,551 @@
+# Translation of Webhook Buttons for WooCommerce in French (France)
+# This file is distributed under the same license as the plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Webhook Buttons for WooCommerce\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webhook-buttons/\n"
+"PO-Revision-Date: 2026-10-27 15:22+0000\n"
+"Last-Translator: Noble Strategies <https://noblestrategies.dev>\n"
+"Language-Team: French (France)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+"X-Generator: scripts/translations.py\n"
+"X-Domain: webhook-buttons\n"
+
+#. Plugin Name of the plugin
+#: webhook-buttons.php
+msgid "Webhook Buttons for WooCommerce"
+msgstr "Webhook Buttons for WooCommerce"
+
+#. Plugin URI of the plugin
+#: webhook-buttons.php
+msgid "https://noblestrategies.dev/webhook-buttons"
+msgstr "https://noblestrategies.dev/webhook-buttons"
+
+#. Description of the plugin
+#: webhook-buttons.php
+msgid "Adds buttons to the WooCommerce order screen. Each button sends the order data to a webhook URL you choose."
+msgstr "Ajoute des boutons à l’écran de commande WooCommerce. Chaque bouton envoie les données de la commande à l’URL de webhook de votre choix."
+
+#. Author of the plugin
+#: webhook-buttons.php
+msgid "Noble Strategies"
+msgstr "Noble Strategies"
+
+#. Author URI of the plugin
+#: webhook-buttons.php
+msgid "https://noblestrategies.dev"
+msgstr "https://noblestrategies.dev"
+
+#: includes/classes/Button.php:82
+msgid "This button is turned off."
+msgstr "Ce bouton est désactivé."
+
+#: includes/classes/Button.php:83 includes/pro/SampleSend.php:54
+msgid "This button has no webhook URL."
+msgstr "Ce bouton n’a pas d’URL de webhook."
+
+#: includes/classes/Button.php:93
+msgid "Unknown user"
+msgstr "Utilisateur inconnu"
+
+#: includes/classes/Endpoints.php:56 react-settings-ui/dist/assets/main.js:121
+msgid "Settings saved."
+msgstr "Réglages enregistrés."
+
+#: includes/classes/Endpoints.php:56
+msgid "Settings could not be saved."
+msgstr "Les réglages n’ont pas pu être enregistrés."
+
+#: includes/classes/Main.php:35
+msgid "Settings"
+msgstr "Réglages"
+
+#: includes/classes/OrderPayload.php:46
+msgid "Not sent yet."
+msgstr "Pas encore envoyé."
+
+#: includes/classes/OrderPayload.php:54
+msgid "No response from the webhook."
+msgstr "Aucune réponse du webhook."
+
+#: includes/classes/OrderPayload.php:246
+msgid "Not sent. The webhook URL is missing."
+msgstr "Non envoyé. L’URL du webhook est manquante."
+
+#: includes/classes/OrderPayload.php:251
+msgid "Not sent. The webhook URL is not valid."
+msgstr "Non envoyé. L’URL du webhook n’est pas valide."
+
+#: includes/classes/OrderPayload.php:256
+msgid "Not sent. No order data was found."
+msgstr "Non envoyé. Aucune donnée de commande trouvée."
+
+#: includes/classes/OrderPayload.php:278
+msgid "Not sent. The webhook could not be reached."
+msgstr "Non envoyé. Le webhook est injoignable."
+
+#. translators: %d: HTTP status code
+#: includes/classes/OrderPayload.php:290
+#, php-format
+msgid "Not sent. The webhook answered with HTTP %d."
+msgstr "Non envoyé. Le webhook a répondu avec HTTP %d."
+
+#: includes/classes/OrderPayload.php:292
+msgid "Sent. Note: the order has no products."
+msgstr "Envoyé. Remarque : la commande ne contient aucun produit."
+
+#: includes/classes/PostEdit.php:49
+msgid "Send"
+msgstr "Envoyer"
+
+#: includes/classes/PostEdit.php:50
+msgid "Cancel"
+msgstr "Annuler"
+
+#: includes/classes/PostEdit.php:51
+msgid "OK"
+msgstr "OK"
+
+#: includes/classes/PostEdit.php:52
+msgid "Send this order now?"
+msgstr "Envoyer cette commande maintenant ?"
+
+#. translators: %s: button title
+#: includes/classes/PostEdit.php:54
+#, php-format
+msgid "%s sent"
+msgstr "%s envoyé"
+
+#. translators: %s: button title
+#: includes/classes/PostEdit.php:56
+#, php-format
+msgid "%s: not sent"
+msgstr "%s : non envoyé"
+
+#: includes/classes/PostEdit.php:57
+msgid "Something went wrong. Please try again."
+msgstr "Une erreur est survenue. Veuillez réessayer."
+
+#: includes/classes/PostEdit.php:119
+msgid "You are not allowed to send order data."
+msgstr "Vous n’êtes pas autorisé à envoyer des données de commande."
+
+#: includes/classes/PostEdit.php:125
+msgid "Missing button or order id."
+msgstr "ID du bouton ou de la commande manquant."
+
+#: includes/classes/PostEdit.php:130
+msgid "Invalid order id."
+msgstr "ID de commande non valide."
+
+#: includes/classes/PostEdit.php:136
+msgid "You are not allowed to use this button."
+msgstr "Vous n’êtes pas autorisé à utiliser ce bouton."
+
+#: includes/classes/ReviewNotice.php:79
+msgid "Is Webhook Buttons working for you?"
+msgstr "Webhook Buttons vous est-il utile ?"
+
+#: includes/classes/ReviewNotice.php:80
+msgid "Your store has sent a few orders with it. A short review on WordPress.org helps other shop owners find it."
+msgstr "Votre boutique a déjà envoyé plusieurs commandes avec lui. Un court avis sur WordPress.org aide d’autres commerçants à le trouver."
+
+#: includes/classes/ReviewNotice.php:83
+msgid "Leave a review"
+msgstr "Laisser un avis"
+
+#: includes/classes/ReviewNotice.php:84
+msgid "Maybe later"
+msgstr "Peut-être plus tard"
+
+#: includes/classes/ReviewNotice.php:85
+msgid "Do not ask again"
+msgstr "Ne plus demander"
+
+#: includes/pro/PayloadOptions.php:28
+msgid "Add a note to send with the order (optional)"
+msgstr "Ajouter une note envoyée avec la commande (facultatif)"
+
+#: includes/pro/PayloadOptions.php:48
+msgid "Note:"
+msgstr "Note :"
+
+#: includes/pro/SampleSend.php:62
+msgid "Sample sent."
+msgstr "Exemple envoyé."
+
+#: webhook-buttons.php:78
+msgid "<strong>WooCommerce</strong> must be active to use <strong>Webhook Buttons for WooCommerce</strong>."
+msgstr "<strong>WooCommerce</strong> doit être actif pour utiliser <strong>Webhook Buttons for WooCommerce</strong>."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Pro options are off because there is no active license. Your saved Pro settings are kept."
+msgstr "Les options Pro sont désactivées car aucune licence n’est active. Vos réglages Pro enregistrés sont conservés."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Button %d"
+msgstr "Bouton %d"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Sample data"
+msgstr "Données d’exemple"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Delete button"
+msgstr "Supprimer le bouton"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "When clicked"
+msgstr "Au clic"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Ask to confirm first"
+msgstr "Demander une confirmation d’abord"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Send right away"
+msgstr "Envoyer immédiatement"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Webhook URL"
+msgstr "URL du webhook"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "This URL is not encrypted. Order data (names, emails, phones) will travel as plain text. Use https:// if you can."
+msgstr "Cette URL n’est pas chiffrée. Les données de commande (noms, e-mails, téléphones) circuleront en clair. Utilisez https:// si possible."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Confirmation message"
+msgstr "Message de confirmation"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Message shown before sending"
+msgstr "Message affiché avant l’envoi"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Options"
+msgstr "Options"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Enable this button"
+msgstr "Activer ce bouton"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Box title (shown on the order screen)"
+msgstr "Titre du bloc (affiché sur l’écran de commande)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Delete box"
+msgstr "Supprimer le bloc"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Buttons"
+msgstr "Boutons"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Add button"
+msgstr "Ajouter un bouton"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "No buttons yet"
+msgstr "Aucun bouton pour le moment"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Loading…"
+msgstr "Chargement…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Failed to load settings. Please refresh the page to try again."
+msgstr "Impossible de charger les réglages. Veuillez actualiser la page pour réessayer."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Could not save settings. Please try again."
+msgstr "Impossible d’enregistrer les réglages. Veuillez réessayer."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Error"
+msgstr "Erreur"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Loading buttons…"
+msgstr "Chargement des boutons…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Add buttons to the order screen. Each button sends the order to a webhook URL."
+msgstr "Ajoutez des boutons à l’écran de commande. Chaque bouton envoie la commande à une URL de webhook."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Undo all changes"
+msgstr "Annuler toutes les modifications"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "No changes to undo"
+msgstr "Aucune modification à annuler"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Undo all"
+msgstr "Tout annuler"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Save all changes"
+msgstr "Enregistrer toutes les modifications"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "All changes saved"
+msgstr "Toutes les modifications sont enregistrées"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Saving…"
+msgstr "Enregistrement…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Save all"
+msgstr "Tout enregistrer"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Upgrade to Pro"
+msgstr "Passer à Pro"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Button boxes"
+msgstr "Blocs de boutons"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Each box shows on the order screen with its buttons."
+msgstr "Chaque bloc apparaît sur l’écran de commande avec ses boutons."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Add box"
+msgstr "Ajouter un bloc"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Buttons appear in a box on the order screen."
+msgstr "Les boutons apparaissent dans un bloc sur l’écran de commande."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Add your first button"
+msgstr "Ajouter votre premier bouton"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Tips"
+msgstr "Astuces"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Drag the grip handle to reorder boxes and buttons."
+msgstr "Faites glisser la poignée pour réordonner les blocs et les boutons."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Click the arrow to open or close a box or button."
+msgstr "Cliquez sur la flèche pour ouvrir ou fermer un bloc ou un bouton."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "A button shows on the order screen only when it is enabled and has a webhook URL."
+msgstr "Un bouton n’apparaît sur l’écran de commande que s’il est activé et possède une URL de webhook."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Click “Save all” to keep your changes."
+msgstr "Cliquez sur « Tout enregistrer » pour conserver vos modifications."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Select options…"
+msgstr "Sélectionner des options…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Search options…"
+msgstr "Rechercher des options…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "No options found"
+msgstr "Aucune option trouvée"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "All options selected"
+msgstr "Toutes les options sont sélectionnées"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "The server sent unexpected data. Please refresh and try again."
+msgstr "Le serveur a renvoyé des données inattendues. Veuillez actualiser la page et réessayer."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Loading advanced settings…"
+msgstr "Chargement des réglages avancés…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Advanced settings"
+msgstr "Réglages avancés"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Extra options for the data each button sends"
+msgstr "Options supplémentaires pour les données envoyées par chaque bouton"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Undo changes"
+msgstr "Annuler les modifications"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "General"
+msgstr "Général"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Exclude product attributes"
+msgstr "Exclure des attributs de produit"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Select attributes to leave out…"
+msgstr "Sélectionner les attributs à exclure…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "These product attributes are not sent."
+msgstr "Ces attributs de produit ne sont pas envoyés."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "All settings saved"
+msgstr "Tous les réglages sont enregistrés"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Pro options"
+msgstr "Options Pro"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "(needs an active license)"
+msgstr "(nécessite une licence active)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Visible to"
+msgstr "Visible par"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "All users who can edit orders"
+msgstr "Tous les utilisateurs pouvant modifier les commandes"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Let the user add a note"
+msgstr "Autoriser l’utilisateur à ajouter une note"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "(needs “Ask to confirm first”)"
+msgstr "(nécessite « Demander une confirmation d’abord »)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Send flat data (one level, for tools that cannot read nested fields)"
+msgstr "Envoyer des données à plat (un seul niveau, pour les outils qui ne lisent pas les champs imbriqués)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Auth header (optional)"
+msgstr "En-tête d’authentification (facultatif)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Header name, for example X-Api-Key"
+msgstr "Nom de l’en-tête, par exemple X-Api-Key"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Header value (secret)"
+msgstr "Valeur de l’en-tête (secrète)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Sent with every request from this button. Stored in your WordPress database."
+msgstr "Envoyé avec chaque requête de ce bouton. Stocké dans votre base de données WordPress."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "(Pro, needs an active license)"
+msgstr "(Pro, nécessite une licence active)"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Order meta keys"
+msgstr "Clés méta de commande"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Send extra order fields saved by other plugins (Advanced Custom Fields, Checkout Field Editor, and more). Pick the keys below. They are sent with every button under custom_fields, named by key."
+msgstr "Envoyez des champs de commande supplémentaires enregistrés par d’autres extensions (Advanced Custom Fields, Checkout Field Editor, etc.). Choisissez les clés ci-dessous. Elles sont envoyées avec chaque bouton sous custom_fields, nommées par clé."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Pick meta keys to send…"
+msgstr "Choisir les clés méta à envoyer…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "No order meta found yet. Create an order first."
+msgstr "Aucune méta de commande trouvée pour le moment. Créez d’abord une commande."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Keys come from your last 200 orders. Keys that start with “_” are private plugin data."
+msgstr "Les clés proviennent de vos 200 dernières commandes. Les clés commençant par « _ » sont des données privées d’extensions."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Custom order fields"
+msgstr "Champs de commande personnalisés"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "No Admin Custom Order Fields plugin found. When it is active, every custom order field is sent under custom_fields automatically."
+msgstr "Extension Admin Custom Order Fields introuvable. Lorsqu’elle est active, chaque champ de commande personnalisé est envoyé automatiquement sous custom_fields."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "These fields are sent with every order under custom_fields. The key never changes, even if you rename the field."
+msgstr "Ces champs sont envoyés avec chaque commande sous custom_fields. La clé ne change jamais, même si vous renommez le champ."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Could not build the sample."
+msgstr "Impossible de générer l’exemple."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Could not send the sample."
+msgstr "Impossible d’envoyer l’exemple."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Close"
+msgstr "Fermer"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "What this button sends"
+msgstr "Ce que ce bouton envoie"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Send a sample to your webhook so Zapier, Make or n8n can see every field. Tools only let you map fields they have seen, so pick at least as many items as your biggest real order."
+msgstr "Envoyez un exemple à votre webhook pour que Zapier, Make ou n8n voient tous les champs. Ces outils ne permettent de mapper que les champs déjà vus : choisissez donc au moins autant d’articles que votre plus grosse commande réelle."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Items in sample"
+msgstr "Articles dans l’exemple"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Copied!"
+msgstr "Copié !"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Copy JSON"
+msgstr "Copier le JSON"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Building sample…"
+msgstr "Génération de l’exemple…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Sample values only. Sending a sample does not count as a free send."
+msgstr "Valeurs d’exemple uniquement. L’envoi d’un exemple ne compte pas comme un envoi gratuit."
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Post this sample to the webhook URL"
+msgstr "Envoyer cet exemple à l’URL du webhook"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Add a webhook URL first"
+msgstr "Ajoutez d’abord une URL de webhook"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Sending…"
+msgstr "Envoi…"
+
+#: react-settings-ui/dist/assets/main.js:121
+msgid "Send sample to webhook"
+msgstr "Envoyer l’exemple au webhook"
+
+#: react-settings-ui/dist/assets/main.js:111
+msgid "This is the free version. Pro adds custom fields, flat data, staff notes, user access control, sample sends and auth headers."
+msgstr "Ceci est la version gratuite. Pro ajoute les champs personnalisés, les données à plat, les notes du personnel, le contrôle d’accès par utilisateur, les envois d’exemple et les en-têtes d’authentification."

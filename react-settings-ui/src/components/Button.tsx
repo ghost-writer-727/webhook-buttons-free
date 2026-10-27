@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import { __, sprintf } from '@wordpress/i18n';
 import { Trash2, GripVertical, Send, ChevronDown, ChevronRight } from 'lucide-react';
 import { Button as ButtonType } from '../types';
 import { ProButtonFields, SampleModal } from '../pro';
@@ -62,7 +63,7 @@ export const Button: React.FC<ButtonProps> = ({
             value={group.title}
             onChange={(e) => change({ title: e.target.value })}
             className="flex-grow px-3 py-1.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2271b1] focus:border-[#2271b1]"
-            placeholder={`Button ${index + 1}`}
+            placeholder={sprintf(/* translators: %d: position of the button in its box */ __('Button %d', 'webhook-buttons'), index + 1)}
           />
 
           <div className="flex items-center gap-2">
@@ -71,7 +72,7 @@ export const Button: React.FC<ButtonProps> = ({
                 type="button"
                 onClick={() => setShowSampleModal(true)}
                 className="p-1 text-gray-500 hover:text-[#2271b1] hover:bg-blue-50 transition-colors"
-                title="Sample data"
+                title={__('Sample data', 'webhook-buttons')}
               >
                 <Send size={16} />
               </button>
@@ -79,8 +80,8 @@ export const Button: React.FC<ButtonProps> = ({
             <button
               type="button"
               onClick={() => onDelete(index)}
-              title="Delete button"
-              aria-label="Delete button"
+              title={__('Delete button', 'webhook-buttons')}
+              aria-label={__('Delete button', 'webhook-buttons')}
               className="p-1.5 bg-red-100 text-red-600 rounded-md hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               <Trash2 size={16} />
@@ -91,19 +92,19 @@ export const Button: React.FC<ButtonProps> = ({
         {isExpanded && (
           <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#1d2327] mb-1">When clicked</label>
+              <label className="block text-sm font-medium text-[#1d2327] mb-1">{__('When clicked', 'webhook-buttons')}</label>
               <select
                 value={group.selectOption}
                 onChange={(e) => change({ selectOption: e.target.value as ButtonType['selectOption'] })}
                 className="w-full px-3 py-2 border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#2271b1] focus:border-[#2271b1] transition-colors bg-white"
               >
-                <option value="Confirmation">Ask to confirm first</option>
-                <option value="Just Send">Send right away</option>
+                <option value="Confirmation">{__('Ask to confirm first', 'webhook-buttons')}</option>
+                <option value="Just Send">{__('Send right away', 'webhook-buttons')}</option>
               </select>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1d2327] mb-1">Webhook URL</label>
+              <label className="block text-sm font-medium text-[#1d2327] mb-1">{__('Webhook URL', 'webhook-buttons')}</label>
               <input
                 type="text"
                 value={group.url}
@@ -113,25 +114,25 @@ export const Button: React.FC<ButtonProps> = ({
               />
               {/^http:\/\//i.test(group.url) && !/^http:\/\/(localhost|127\.0\.0\.1)([:/]|$)/i.test(group.url) && (
                 <p className="text-sm text-[#996800] mt-1" role="alert">
-                  This URL is not encrypted. Order data (names, emails, phones) will travel as plain text. Use https:// if you can.
+                  {__('This URL is not encrypted. Order data (names, emails, phones) will travel as plain text. Use https:// if you can.', 'webhook-buttons')}
                 </p>
               )}
             </div>
 
             <div className="mt-2">
-              <label className="block text-sm font-medium text-[#1d2327] mb-1">Confirmation message</label>
+              <label className="block text-sm font-medium text-[#1d2327] mb-1">{__('Confirmation message', 'webhook-buttons')}</label>
               <textarea
                 value={group.message}
                 onChange={(e) => change({ message: e.target.value })}
                 rows={3}
                 className={`w-full px-3 py-2 border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#2271b1] focus:border-[#2271b1] transition-colors resize-none ${group.selectOption === 'Just Send' ? 'bg-gray-100 cursor-not-allowed' : ''}`}
-                placeholder="Message shown before sending"
+                placeholder={__('Message shown before sending', 'webhook-buttons')}
                 disabled={group.selectOption === 'Just Send'}
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1d2327] mb-4">Options</label>
+              <label className="block text-sm font-medium text-[#1d2327] mb-4">{__('Options', 'webhook-buttons')}</label>
               <label className="inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -139,7 +140,7 @@ export const Button: React.FC<ButtonProps> = ({
                   onChange={(e) => change({ enabled: e.target.checked })}
                   className="form-checkbox h-4 w-4 text-[#2271b1] focus:ring-[#2271b1] border-gray-300 rounded"
                 />
-                <span className="ml-2 text-sm text-gray-700">Enable this button</span>
+                <span className="ml-2 text-sm text-gray-700">{__('Enable this button', 'webhook-buttons')}</span>
               </label>
             </div>
 
@@ -158,7 +159,7 @@ export const Button: React.FC<ButtonProps> = ({
             isOpen={showSampleModal}
             onClose={() => setShowSampleModal(false)}
             button={group}
-            buttonTitle={group.title || `Button ${index + 1}`}
+            buttonTitle={group.title || sprintf(__('Button %d', 'webhook-buttons'), index + 1)}
           />
         </Suspense>
       )}

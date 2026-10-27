@@ -6,13 +6,14 @@ Plugin URI: https://noblestrategies.dev/webhook-buttons
 Description: Adds buttons to the WooCommerce order screen. Each button sends the order data to a webhook URL you choose.
 Author: Noble Strategies
 Author URI: https://noblestrategies.dev
-Version: 1.0.4
+Version: 1.0.5
 Requires at least: 6.5
 Requires PHP: 7.4
 Requires Plugins: woocommerce
 WC requires at least: 10.0
 WC tested up to: 11.2
 Text Domain: webhook-buttons
+Domain Path: /languages
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 @fs_premium_only /includes/pro/, /react-settings-ui/src/pro/
@@ -26,7 +27,7 @@ if ( function_exists( 'webhook_buttons_fs' ) && webhook_buttons_fs() ) {
     return;
 }
 
-define( 'WEBHOOK_BUTTONS_VERSION', '1.0.4' );
+define( 'WEBHOOK_BUTTONS_VERSION', '1.0.5' );
 define( 'WEBHOOK_BUTTONS_PLUGIN_FILE', __FILE__ );
 define( 'WEBHOOK_BUTTONS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WEBHOOK_BUTTONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -62,6 +63,11 @@ add_action( 'before_woocommerce_init', function () {
     if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
         \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
     }
+} );
+
+// Translations shipped inside the plugin (languages/). A wordpress.org language pack, when one exists, wins.
+add_action( 'init', function () {
+    load_plugin_textdomain( 'webhook-buttons', false, dirname( WEBHOOK_BUTTONS_PLUGIN_BASENAME ) . '/languages' );
 } );
 
 // Bootstrap inside plugins_loaded with WooCommerce check

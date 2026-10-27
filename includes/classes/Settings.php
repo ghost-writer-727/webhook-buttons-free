@@ -154,10 +154,13 @@ class Settings {
 		wp_enqueue_script(
 			'webhook-buttons-settings-ui',
 			$main->plugin_url . 'react-settings-ui/dist/assets/main.js',
-			[],
+			[ 'wp-i18n' ],
 			WEBHOOK_BUTTONS_VERSION,
 			true
 		);
+		// Strings in the bundle use wp.i18n with this text domain. Translations come from the wordpress.org
+		// language pack or from the JSON files shipped in languages/ (see wp i18n make-json).
+		wp_set_script_translations( 'webhook-buttons-settings-ui', 'webhook-buttons', $main->plugin_dir . 'languages' );
 
 		$config = [
 			'wp_rest_nonce' => wp_create_nonce( 'wp_rest' ),
